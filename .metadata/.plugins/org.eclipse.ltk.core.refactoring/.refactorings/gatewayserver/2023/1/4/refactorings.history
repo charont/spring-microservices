@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.eaztbytes.gatewayserver.filters.TraceFilter&apos; to &apos;TraceFilter1&apos;&#x0D;&#x0A;- Original project: &apos;gatewayserver&apos;&#x0D;&#x0A;- Original element: &apos;com.eaztbytes.gatewayserver.filters.TraceFilter&apos;&#x0D;&#x0A;- Renamed element: &apos;com.eaztbytes.gatewayserver.filters.TraceFilter1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TraceFilter&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.eaztbytes.gatewayserver.filters{TraceFilter.java[TraceFilter" matchStrategy="1" name="TraceFilter1" qualified="false" references="true" similarDeclarations="false" stamp="1674632141143" textual="false" version="1.0"/>
+</session>

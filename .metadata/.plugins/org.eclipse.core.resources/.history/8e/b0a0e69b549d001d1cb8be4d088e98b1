@@ -1,0 +1,5 @@
+package com.eaztbytes.configserver.config;
+
+public class ConfigRabbitmq {
+
+}
