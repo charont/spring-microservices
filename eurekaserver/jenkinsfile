@@ -1,0 +1,22 @@
+pipeline
+{
+  agent any
+    stages {
+        stage('Clone repository') {
+        	echo 'check out scm'
+        	checkout scm
+    }
+      stage ('Build & Test') {
+         steps {
+         withMaven(maven : 'Maven')
+         {
+           sh 'mvn clean install'
+         }
+      }
+      }
+      stage('Build Docker Image') {
+            steps {
+                sh 'mvn spring-boot:build-image -DskipTest'
+            }
+        }
+}
