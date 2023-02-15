@@ -10,10 +10,7 @@ pipeline
     }
       stage ('Build & Test') {
          steps {
-         withMaven(maven : 'Maven')
-         {
            sh 'mvn clean install'
-         }
       }
       }
       stage('Build Docker Image') {
