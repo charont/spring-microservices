@@ -1,12 +1,11 @@
 pipeline
 {
   agent any
-    stages {
-        stage('Clone repository') {
-        	echo 'check out scm'
+  stages{
+  
+      stage('Clone repository') {
         	checkout scm
     }
-	}
       stage ('Build & Test') {
          steps {
          withMaven(maven : 'Maven')
@@ -20,4 +19,8 @@ pipeline
                 sh 'mvn spring-boot:build-image -DskipTest'
             }
         }
+  
+  
+  }
+    
 }
