@@ -6,6 +6,7 @@ pipeline
         	echo 'check out scm'
         	checkout scm
     }
+	}
       stage ('Build & Test') {
          steps {
          withMaven(maven : 'Maven')
