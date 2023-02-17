@@ -21,7 +21,10 @@ pipeline
       }
       stage('Build Docker Image') {
             steps {
-                sh 'mvn spring-boot:build-image -DskipTest'
+			dir ('accounts') {
+					 sh 'mvn spring-boot:build-image -DskipTest'
+				}
+               
             }
         }
   
