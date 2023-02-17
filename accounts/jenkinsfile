@@ -13,7 +13,10 @@ pipeline
     }
       stage ('Build & Test') {
          steps {
-           sh 'mvn clean install'
+			 dir ('accounts') {
+					 sh 'mvn clean install'
+				}
+          
       }
       }
       stage('Build Docker Image') {
