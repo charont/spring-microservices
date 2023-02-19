@@ -26,9 +26,7 @@ pipeline
       stage('Build Docker Image') {
             steps {
 			dir ('accounts') {
-					script{
-						 dockerImage = docker.build registry
-					}
+					sh 'mvn spring-boot:build-image -DskipTests'
 				}
                
             }
