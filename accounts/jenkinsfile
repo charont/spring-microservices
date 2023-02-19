@@ -7,6 +7,7 @@ pipeline
 	environment{
 		dockerImage = ''
 		registry = 'charont/charont'
+		registryCredential = 'docker-hub-id'
 	}
   stages{
       stage('Clone repository') {
