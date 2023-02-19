@@ -23,7 +23,7 @@ pipeline
       stage('Build Docker Image') {
             steps {
 			dir ('accounts') {
-					 sh 'docker build -t charont/accounts:latest .'
+					 sh 'mvn spring-boot:build-image -DskipTests'
 				}
                
             }
