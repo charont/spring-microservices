@@ -5,7 +5,10 @@ pipeline
         maven 'Maven 3.6.0'
     }
   stages{
-  
+	stage('Initialize'){
+        def dockerHome = tool 'mydocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
       stage('Clone repository') {
         	steps{
 			checkout scm
