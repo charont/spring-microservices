@@ -1,10 +1,10 @@
 pipeline
 {
-  agent any
-   tools { 
-        maven 'Maven 3.6.0'
-		dockerTool  'mydocker' 
-    }
+	agent any
+	tools {
+	  dockerTool 'mydocker'
+	  maven 'Maven 3.6.0'
+	}
   stages{
       stage('Clone repository') {
         	steps{
@@ -15,7 +15,7 @@ pipeline
             steps {
 			dir ('accounts') {
 					withDockerRegistry(credentialsId: 'docker-hub-id', url: 'https://index.docker.io/v1/') {
-						sh 'docker build -t charont/accounts:latest'
+						sh 'docker build -t charont/accounts:latest .'
 					}
 				}
                
